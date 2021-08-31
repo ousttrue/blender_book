@@ -3,7 +3,7 @@ authors = ["ousttrue"]
 language = "en"
 multilingual = false
 src = "src"
-title = "blender book"
+title = "blender memo"
 
 [output.html]
 site-url = "https://ousttrue.github.io/blender_book/"
