@@ -3,8 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>blender memo</title>
-                <meta name="robots" content="noindex" />
+        <title>bl_info - blender memo</title>
                 
 
         <!-- Custom HTML head -->
@@ -83,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="prefix.html">Prefix</a></li><li class="chapter-item expanded "><a href="mathutils.html"><strong aria-hidden="true">1.</strong> mathutils</a></li><li class="chapter-item expanded affix "><li class="part-title">addon</li><li class="chapter-item expanded "><a href="bl_info.html"><strong aria-hidden="true">2.</strong> bl_info</a></li><li class="chapter-item expanded affix "><li class="part-title">bpy</li><li class="chapter-item expanded "><a href="bpy/context.html"><strong aria-hidden="true">3.</strong> context</a></li><li class="chapter-item expanded "><a href="bpy/mode.html"><strong aria-hidden="true">4.</strong> mode</a></li><li class="chapter-item expanded "><a href="bpy/mesh.html"><strong aria-hidden="true">5.</strong> mesh</a></li><li class="chapter-item expanded "><a href="bpy/armature.html"><strong aria-hidden="true">6.</strong> armature</a></li><li class="chapter-item expanded "><a href="bpy/bmesh.html"><strong aria-hidden="true">7.</strong> bmesh</a></li><li class="chapter-item expanded "><a href="bpy/props.html"><strong aria-hidden="true">8.</strong> bpy.props</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="prefix.html">Prefix</a></li><li class="chapter-item expanded "><a href="mathutils.html"><strong aria-hidden="true">1.</strong> mathutils</a></li><li class="chapter-item expanded affix "><li class="part-title">addon</li><li class="chapter-item expanded "><a href="bl_info.html" class="active"><strong aria-hidden="true">2.</strong> bl_info</a></li><li class="chapter-item expanded affix "><li class="part-title">bpy</li><li class="chapter-item expanded "><a href="bpy/context.html"><strong aria-hidden="true">3.</strong> context</a></li><li class="chapter-item expanded "><a href="bpy/mode.html"><strong aria-hidden="true">4.</strong> mode</a></li><li class="chapter-item expanded "><a href="bpy/mesh.html"><strong aria-hidden="true">5.</strong> mesh</a></li><li class="chapter-item expanded "><a href="bpy/armature.html"><strong aria-hidden="true">6.</strong> armature</a></li><li class="chapter-item expanded "><a href="bpy/bmesh.html"><strong aria-hidden="true">7.</strong> bmesh</a></li><li class="chapter-item expanded "><a href="bpy/props.html"><strong aria-hidden="true">8.</strong> bpy.props</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -121,7 +120,10 @@
                                                                         <a href="https://github.com/ousttrue/blender_book/tree/master" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
-                                                
+                                                                        <a href="https://github.com/ousttrue/blender_book/edit/master/src/bl_info.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+                        
                     </div>
                 </div>
 
@@ -147,24 +149,7 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="prefix"><a class="header" href="#prefix">Prefix</a></h1>
-<p>Blender 関連のメモ整理。
-AddOn(importer/exporter)作成など。</p>
-<h2 id="python-version"><a class="header" href="#python-version">python version</a></h2>
-<p>memo</p>
-<table><thead><tr><th>blender</th><th>python</th></tr></thead><tbody>
-<tr><td>3.00alpha</td><td>3.9</td></tr>
-<tr><td>2.93</td><td>3.9</td></tr>
-<tr><td>2.8</td><td>3.8</td></tr>
-<tr><td>2.79</td><td>3.5.3</td></tr>
-</tbody></table>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="mathutils"><a class="header" href="#mathutils">mathutils</a></h1>
-<ul>
-<li><a href="https://docs.blender.org/api/current/mathutils.html">https://docs.blender.org/api/current/mathutils.html</a></li>
-<li><a href="https://docs.blender.org/api/blender_python_api_current/mathutils.html">https://docs.blender.org/api/blender_python_api_current/mathutils.html</a></li>
-<li><a href="https://docs.blender.org/api/blender_python_api_current/mathutils.html?highlight=vector">https://docs.blender.org/api/blender_python_api_current/mathutils.html?highlight=vector</a></li>
-</ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="bl_info"><a class="header" href="#bl_info">bl_info</a></h1>
+                        <h1 id="bl_info"><a class="header" href="#bl_info">bl_info</a></h1>
 <pre><code class="language-py">bl_info = {
     &quot;name&quot;: &quot;yup gltf exporter&quot;,
     &quot;author&quot;: &quot;ousttrue&quot;,
@@ -205,121 +190,18 @@ if __name__ == &quot;__main__&quot;:
 <li><a href="https://nutti.gitbooks.io/introduction-to-add-on-development-in-blender/content/body/chapter_01/02_Use_Blender_Add-on.html">https://nutti.gitbooks.io/introduction-to-add-on-development-in-blender/content/body/chapter_01/02_Use_Blender_Add-on.html</a></li>
 <li><a href="https://docs.blender.org/manual/en/dev/advanced/scripting/addon_tutorial.html">https://docs.blender.org/manual/en/dev/advanced/scripting/addon_tutorial.html</a></li>
 </ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="context"><a class="header" href="#context">context</a></h1>
-<pre><code class="language-py">bpy.context.selected_objects
-</code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="mode"><a class="header" href="#mode">mode</a></h1>
-<pre><code class="language-py">bpy.ops.object.mode_set(mode='POSE', toggle=False)
-</code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="mesh"><a class="header" href="#mesh">mesh</a></h1>
-<p>tessface無くなった
-https://dskjal.com/blender/script-279-to-280.html</p>
-<pre><code>http://blenderscripting.blogspot.com/2011/06/using-frompydata.html
-
-https://docs.blender.org/api/current/bpy.types.Mesh.html
-https://docs.blender.org/api/current/bpy.types.MeshTessFace.html
-</code></pre>
-<p>https://docs.blender.org/api/current/bpy.types.MeshVertex.html</p>
-<p>[Blender PythonのMeshデータアクセスのチートシート https://qiita.com/kenyoshi17/items/b93bbba6451e3c6017e5]</p>
-<pre><code class="language-py">import bpy
-
-me = bpy.context.object.data
-uv_layer = me.uv.layers.active.data
-
-for poly in me.polygons:
-    print(&quot;Polygon index: %d, length: %d&quot; % (poly.index, poly.loop_total))
-
-    # range is used here to show how the polygons reference loops,
-    # for convenience 'poly.loop_indices' can be used instead.
-    for loop_index in range(poly.loop_start, poly.loop_start + poly.loop_total):
-        print(&quot;    Vertex: %d&quot; % me.loops[loop_index].vertex_index)
-        print(&quot;    UV: %r&quot; % uv_layer[loop_index].uv)
-</code></pre>
-<ul>
-<li>[Blender PythonのMeshデータアクセスのチートシート https://qiita.com/kenyoshi17/items/b93bbba6451e3c6017e5]</li>
-</ul>
-<p>Mesh.vertices (3 points in space)
-Mesh.edges (reference 2 vertices)
-Mesh.loops (reference a single vertex and edge) = indices ?
-Mesh.polygons: (reference a range of loops) = faces ?</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="armature"><a class="header" href="#armature">armature</a></h1>
-<pre><code class="language-py">def create_humanoid():
-    print('#### create_humanoid ####')
-    # data
-    armature = bpy.data.armatures.new(name='Armature')
-    # obj
-    obj = bpy.data.objects.new(name='Armature', object_data=armature)
-    # link
-    bpy.context.scene.collection.objects.link(obj)
-    # edit mode
-    bpy.context.view_layer.objects.active = obj
-    print(bpy.context.object.mode)
-    bpy.ops.object.mode_set(mode='EDIT')
-    # add bone
-    bone = armature.edit_bones.new('Bone')
-    bone.tail = [0, 0, 1]
-</code></pre>
-<pre><code class="language-py"># data
-data = bpy.data.armatures.new(name = &quot;Armature&quot;)
-# obj
-obj = bpy.data.objects.new(name = &quot;Armature&quot;, object_data = data)
-# link
-bpy.context.scene.collection.objects.link(obj)
-</code></pre>
-<p>boneの追加</p>
-<pre><code class="language-py"># create hips
-with enter_edit_mode():
-    hips = armature.edit_bones.new('hips')
-    ot.report({'INFO'}, f'create: {hips}'
-</code></pre>
-<ul>
-<li><a href="https://docs.blender.org/api/current/bpy.types.Armature.html">https://docs.blender.org/api/current/bpy.types.Armature.html</a></li>
-<li><a href="https://docs.blender.org/api/current/bpy.types.Bone.html">https://docs.blender.org/api/current/bpy.types.Bone.html</a></li>
-<li><a href="https://docs.blender.org/api/current/bpy.types.ArmatureEditBones.html#bpy.types.ArmatureEditBones">https://docs.blender.org/api/current/bpy.types.ArmatureEditBones.html#bpy.types.ArmatureEditBones</a></li>
-<li><a href="https://docs.blender.org/api/current/info_gotcha.html#editbones-posebones-bone-bones">https://docs.blender.org/api/current/info_gotcha.html#editbones-posebones-bone-bones</a></li>
-<li><a href="https://dskjal.com/blender/bone-script.html">https://dskjal.com/blender/bone-script.html</a></li>
-</ul>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="bmesh"><a class="header" href="#bmesh">bmesh</a></h1>
-<p>Mesh操作用のライブラリ(bpyとは別系統)
-https://docs.blender.org/api/current/bmesh.html
-https://docs.blender.org/api/2.83/bmesh.html</p>
-<pre><code>[Blender Python BMesh 〜点の操作〜 http://takunoji.hatenablog.com/entry/2018/03/26/225317]
-[Blender Python 開発メモ 〜UV座標の取得〜 http://takunoji.hatenablog.com/entry/2018/03/20/221150]
-</code></pre>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="bpyprops"><a class="header" href="#bpyprops">bpy.props</a></h1>
-<ul>
-<li>
-<p><a href="https://docs.blender.org/api/current/bpy.props.html">https://docs.blender.org/api/current/bpy.props.html</a></p>
-</li>
-<li>
-<p><a href="https://gist.github.com/jirihnidek/2e5218dd8bf06787e538">https://gist.github.com/jirihnidek/2e5218dd8bf06787e538</a></p>
-</li>
-<li>
-<p><a href="https://blender.stackexchange.com/questions/27361/duplicating-object-and-default-value-of-property">https://blender.stackexchange.com/questions/27361/duplicating-object-and-default-value-of-property</a></p>
-</li>
-<li>
-<p><a href="https://dskjal.com/blender/rna-vs-id-property.html">https://dskjal.com/blender/rna-vs-id-property.html</a></p>
-</li>
-<li>
-<p><a href="http://blenderscript.ni-moe.com/">http://blenderscript.ni-moe.com/</a></p>
-</li>
-</ul>
-<h2 id="floatproperty"><a class="header" href="#floatproperty">FloatProperty</a></h2>
-<ul>
-<li><a href="https://docs.blender.org/api/current/bpy.props.html#bpy.props.FloatProperty">https://docs.blender.org/api/current/bpy.props.html#bpy.props.FloatProperty</a></li>
-</ul>
-<h2 id="pointerproperty"><a class="header" href="#pointerproperty">PointerProperty</a></h2>
-<ul>
-<li><a href="https://docs.blender.org/api/current/bpy.types.PointerProperty.html">https://docs.blender.org/api/current/bpy.types.PointerProperty.html</a></li>
-<li><a href="https://blender.stackexchange.com/questions/6975/is-it-possible-to-use-bpy-props-pointerproperty-to-store-a-pointer-to-an-object/98651#98651">https://blender.stackexchange.com/questions/6975/is-it-possible-to-use-bpy-props-pointerproperty-to-store-a-pointer-to-an-object/98651#98651</a></li>
-</ul>
-<p>ObjectやPropertyGroupへの参照</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="mathutils.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
                         
+                                                    <a rel="next" href="bpy/context.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
                         
                         <div style="clear: both"></div>
                     </nav>
@@ -327,7 +209,13 @@ https://docs.blender.org/api/2.83/bmesh.html</p>
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="mathutils.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
                 
+                                    <a rel="next" href="bpy/context.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
                             </nav>
 
         </div>
@@ -350,11 +238,6 @@ https://docs.blender.org/api/2.83/bmesh.html</p>
 
         <!-- Custom JS scripts -->
         
-                        <script type="text/javascript">
-        window.addEventListener('load', function() {
-            window.setTimeout(window.print, 100);
-        });
-        </script>
-                
+        
     </body>
 </html>

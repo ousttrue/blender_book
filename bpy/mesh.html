@@ -3,9 +3,8 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title></title>
-                        <base href="https://ousttrue.github.io/blender_book/">
-        
+        <title>mesh - blender memo</title>
+                
 
         <!-- Custom HTML head -->
         
@@ -15,21 +14,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="theme-color" content="#ffffff" />
 
-                <link rel="icon" href="favicon.svg">
-                        <link rel="shortcut icon" href="favicon.png">
-                <link rel="stylesheet" href="css/variables.css">
-        <link rel="stylesheet" href="css/general.css">
-        <link rel="stylesheet" href="css/chrome.css">
-                <link rel="stylesheet" href="css/print.css" media="print">
+                <link rel="icon" href="../favicon.svg">
+                        <link rel="shortcut icon" href="../favicon.png">
+                <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+                <link rel="stylesheet" href="../css/print.css" media="print">
         
         <!-- Fonts -->
-        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
-                <link rel="stylesheet" href="fonts/fonts.css">
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+                <link rel="stylesheet" href="../fonts/fonts.css">
         
         <!-- Highlight.js Stylesheets -->
-        <link rel="stylesheet" href="highlight.css">
-        <link rel="stylesheet" href="tomorrow-night.css">
-        <link rel="stylesheet" href="ayu-highlight.css">
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
 
         <!-- Custom theme stylesheets -->
         
@@ -37,7 +36,7 @@
     <body>
         <!-- Provide site root to javascript -->
         <script type="text/javascript">
-            var path_to_root = "";
+            var path_to_root = "../";
             var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
         </script>
 
@@ -83,7 +82,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="prefix.html">Prefix</a></li><li class="chapter-item expanded "><a href="mathutils.html"><strong aria-hidden="true">1.</strong> mathutils</a></li><li class="chapter-item expanded affix "><li class="part-title">addon</li><li class="chapter-item expanded "><a href="bl_info.html"><strong aria-hidden="true">2.</strong> bl_info</a></li><li class="chapter-item expanded affix "><li class="part-title">bpy</li><li class="chapter-item expanded "><a href="bpy/context.html"><strong aria-hidden="true">3.</strong> context</a></li><li class="chapter-item expanded "><a href="bpy/mode.html"><strong aria-hidden="true">4.</strong> mode</a></li><li class="chapter-item expanded "><a href="bpy/mesh.html"><strong aria-hidden="true">5.</strong> mesh</a></li><li class="chapter-item expanded "><a href="bpy/armature.html"><strong aria-hidden="true">6.</strong> armature</a></li><li class="chapter-item expanded "><a href="bpy/bmesh.html"><strong aria-hidden="true">7.</strong> bmesh</a></li><li class="chapter-item expanded "><a href="bpy/props.html"><strong aria-hidden="true">8.</strong> bpy.props</a></li></ol>            </div>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="../prefix.html">Prefix</a></li><li class="chapter-item expanded "><a href="../mathutils.html"><strong aria-hidden="true">1.</strong> mathutils</a></li><li class="chapter-item expanded affix "><li class="part-title">addon</li><li class="chapter-item expanded "><a href="../bl_info.html"><strong aria-hidden="true">2.</strong> bl_info</a></li><li class="chapter-item expanded affix "><li class="part-title">bpy</li><li class="chapter-item expanded "><a href="../bpy/context.html"><strong aria-hidden="true">3.</strong> context</a></li><li class="chapter-item expanded "><a href="../bpy/mode.html"><strong aria-hidden="true">4.</strong> mode</a></li><li class="chapter-item expanded "><a href="../bpy/mesh.html" class="active"><strong aria-hidden="true">5.</strong> mesh</a></li><li class="chapter-item expanded "><a href="../bpy/armature.html"><strong aria-hidden="true">6.</strong> armature</a></li><li class="chapter-item expanded "><a href="../bpy/bmesh.html"><strong aria-hidden="true">7.</strong> bmesh</a></li><li class="chapter-item expanded "><a href="../bpy/props.html"><strong aria-hidden="true">8.</strong> bpy.props</a></li></ol>            </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
 
@@ -115,13 +114,16 @@
                     <h1 class="menu-title">blender memo</h1>
 
                     <div class="right-buttons">
-                                                <a href="print.html" title="Print this book" aria-label="Print this book">
+                                                <a href="../print.html" title="Print this book" aria-label="Print this book">
                             <i id="print-button" class="fa fa-print"></i>
                         </a>
                                                                         <a href="https://github.com/ousttrue/blender_book/tree/master" title="Git repository" aria-label="Git repository">
                             <i id="git-repository-button" class="fa fa-github"></i>
                         </a>
-                                                
+                                                                        <a href="https://github.com/ousttrue/blender_book/edit/master/src/bpy/mesh.md" title="Suggest an edit" aria-label="Suggest an edit">
+                            <i id="git-edit-button" class="fa fa-edit"></i>
+                        </a>
+                        
                     </div>
                 </div>
 
@@ -147,14 +149,49 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="document-not-found-404"><a class="header" href="#document-not-found-404">Document not found (404)</a></h1>
-<p>This URL is invalid, sorry. Please use the navigation bar or search to continue.</p>
+                        <h1 id="mesh"><a class="header" href="#mesh">mesh</a></h1>
+<p>tessface無くなった
+https://dskjal.com/blender/script-279-to-280.html</p>
+<pre><code>http://blenderscripting.blogspot.com/2011/06/using-frompydata.html
+
+https://docs.blender.org/api/current/bpy.types.Mesh.html
+https://docs.blender.org/api/current/bpy.types.MeshTessFace.html
+</code></pre>
+<p>https://docs.blender.org/api/current/bpy.types.MeshVertex.html</p>
+<p>[Blender PythonのMeshデータアクセスのチートシート https://qiita.com/kenyoshi17/items/b93bbba6451e3c6017e5]</p>
+<pre><code class="language-py">import bpy
+
+me = bpy.context.object.data
+uv_layer = me.uv.layers.active.data
+
+for poly in me.polygons:
+    print(&quot;Polygon index: %d, length: %d&quot; % (poly.index, poly.loop_total))
+
+    # range is used here to show how the polygons reference loops,
+    # for convenience 'poly.loop_indices' can be used instead.
+    for loop_index in range(poly.loop_start, poly.loop_start + poly.loop_total):
+        print(&quot;    Vertex: %d&quot; % me.loops[loop_index].vertex_index)
+        print(&quot;    UV: %r&quot; % uv_layer[loop_index].uv)
+</code></pre>
+<ul>
+<li>[Blender PythonのMeshデータアクセスのチートシート https://qiita.com/kenyoshi17/items/b93bbba6451e3c6017e5]</li>
+</ul>
+<p>Mesh.vertices (3 points in space)
+Mesh.edges (reference 2 vertices)
+Mesh.loops (reference a single vertex and edge) = indices ?
+Mesh.polygons: (reference a range of loops) = faces ?</p>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
+                                                    <a rel="prev" href="../bpy/mode.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
                         
+                                                    <a rel="next" href="../bpy/armature.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
                         
                         <div style="clear: both"></div>
                     </nav>
@@ -162,7 +199,13 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                                    <a rel="prev" href="../bpy/mode.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
                 
+                                    <a rel="next" href="../bpy/armature.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
                             </nav>
 
         </div>
@@ -175,13 +218,13 @@
         </script>
         
         
-                <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+                <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
         
-        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
-        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
-        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Custom JS scripts -->
         
