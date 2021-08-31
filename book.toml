@@ -1,0 +1,11 @@
+[book]
+authors = ["ousttrue"]
+language = "en"
+multilingual = false
+src = "src"
+title = "blender book"
+
+[output.html]
+site-url = "https://ousttrue.github.io/blender_book/"
+git-repository-url = "https://github.com/ousttrue/blender_book/tree/master"
+edit-url-template = "https://github.com/ousttrue/blender_book/edit/master/{path}"
