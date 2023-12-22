@@ -1,8 +1,7 @@
 ---
-sidebar_position: 4
+title: bpy.types.Armature
+sidebar_position: 3
 ---
-
-# armature
 
 ```py
 def create_humanoid():
