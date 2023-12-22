@@ -2,19 +2,18 @@
 sidebar_position: 0
 ---
 
-[Prefix](./prefix.md)
+Blender 関連のメモ整理。
+主に importer/exporter の開発周り。
 
-- [mathutils](./mathutils.md)
+# python version
 
+memo
 
-# addon
+| blender   | python |
+|-----------|--------|
+| 4.0       | 3.10   |
+| 3.00alpha | 3.9    |
+| 2.93      | 3.9    |
+| 2.8       | 3.8    |
+| 2.79      | 3.5.3  |
 
-- [bl_info](./bl_info.md)
-# bpy
-
-- [context](./bpy/context.md)
-- [mode](./bpy/mode.md)
-- [mesh](./bpy/mesh.md)
-- [armature](./bpy/armature.md)
-- [bmesh](./bpy/bmesh.md)
-- [bpy.props](./bpy/props.md)

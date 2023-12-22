@@ -37,3 +37,7 @@ Mesh.vertices (3 points in space)
 Mesh.edges (reference 2 vertices)
 Mesh.loops (reference a single vertex and edge) = indices ?
 Mesh.polygons: (reference a range of loops) = faces ?
+
+# uv_layers
+- [テクスチャUVを調べる｜Hajime Saito](https://note.com/replicorn/n/nc6f582006a99)
+
