@@ -1,3 +1,7 @@
+---
+sidebar_position: 5
+---
+
 # bmesh
 
 Mesh操作用のライブラリ(bpyとは別系統)

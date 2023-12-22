@@ -1,3 +1,7 @@
+---
+sidebar_position: 3
+---
+
 # bl_info
 
 ```py
@@ -34,9 +38,9 @@ if __name__ == "__main__":
 ```
 
 addonの登録情報を記述する。
-* <https://wiki.blender.org/wiki/Process/Addons/Guidelines/metainfo>
-* <https://github.com/nikorummukainen/blender-python-code-templates>
+* https://wiki.blender.org/wiki/Process/Addons/Guidelines/metainfo
+* https://github.com/nikorummukainen/blender-python-code-templates
 * [はじめてのBlenderアドオン開発](https://www.gitbook.com/book/nutti/introduction-to-add-on-development-in-blender/details)
-* <https://nutti.gitbooks.io/introduction-to-add-on-development-in-blender/content/>
-* <https://nutti.gitbooks.io/introduction-to-add-on-development-in-blender/content/body/chapter_01/02_Use_Blender_Add-on.html>
-* <https://docs.blender.org/manual/en/dev/advanced/scripting/addon_tutorial.html>
+* https://nutti.gitbooks.io/introduction-to-add-on-development-in-blender/content/
+* https://nutti.gitbooks.io/introduction-to-add-on-development-in-blender/content/body/chapter_01/02_Use_Blender_Add-on.html
+* https://docs.blender.org/manual/en/dev/advanced/scripting/addon_tutorial.html

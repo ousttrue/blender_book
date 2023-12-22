@@ -1,3 +1,7 @@
+---
+sidebar_position: 4
+---
+
 # armature
 
 ```py
@@ -35,8 +39,8 @@ with enter_edit_mode():
     ot.report({'INFO'}, f'create: {hips}'
 ```
 
-* <https://docs.blender.org/api/current/bpy.types.Armature.html>
-* <https://docs.blender.org/api/current/bpy.types.Bone.html>
-* <https://docs.blender.org/api/current/bpy.types.ArmatureEditBones.html#bpy.types.ArmatureEditBones>
-* <https://docs.blender.org/api/current/info_gotcha.html#editbones-posebones-bone-bones>
-* <https://dskjal.com/blender/bone-script.html>
+* https://docs.blender.org/api/current/bpy.types.Armature.html
+* https://docs.blender.org/api/current/bpy.types.Bone.html
+* https://docs.blender.org/api/current/bpy.types.ArmatureEditBones.html#bpy.types.ArmatureEditBones
+* https://docs.blender.org/api/current/info_gotcha.html#editbones-posebones-bone-bones
+* https://dskjal.com/blender/bone-script.html

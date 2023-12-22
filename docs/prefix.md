@@ -1,3 +1,7 @@
+---
+sidebar_position: 1
+---
+
 # Prefix
 
 Blender 関連のメモ整理。
