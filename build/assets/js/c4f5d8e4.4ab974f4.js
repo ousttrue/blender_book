@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkBlenderBook=self.webpackChunkBlenderBook||[]).push([[195],{2841:(e,n,o)=>{o.r(n),o.d(n,{default:()=>u});o(7294);var s=o(6550),r=o(4996),t=o(5893);const u=function(){return(0,t.jsx)(s.l_,{to:(0,r.Z)("/docs/")})}}}]);
