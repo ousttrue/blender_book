@@ -4,7 +4,7 @@ sidebar_position: 3
 
 # 機能の登録
 
-`blender` - `preferences` - `Add-ons` 
+`blender` - `preferences` - `Add-ons`
 
 ```python
 # 作ったクラスを格納
@@ -28,18 +28,20 @@ if __name__ == "__main__":
    register()
 ```
 
-
 # class
+
 ## Operator
+
 [[bpy.types.Operator]]
 
 ## Panel
+
 [[bpy.types.Panel]]
 
 ## Property
+
 [[bpy.types.ProertyGroup]]
 
 # menu
 
 TODO:
-

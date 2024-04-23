@@ -1,55 +1,78 @@
 ---
+title: addon は python module
 sidebar_position: 1
 ---
 
-* https://docs.blender.org/manual/en/latest/advanced/scripting/addon\_tutorial.html
+- https://docs.blender.org/manual/en/4.1/advanced/scripting/addon_tutorial.html
 
-# path
+## module
 
-## Windows
+python module として実装します。
 
-`%APPDATA%/Blender Foundation/Blender/BL_VERSION/scripts/addons`
+```py title="blender からの見た目の疑似コード"
+import sys
+sys.path.append(PATH_TO_ADDONS)
+import my_addon
 
-に python module として配置する。
+# 登録情報
+my_addon.bl_info
 
-# 構成
+# 登録(enable)
+my_addon.register()
 
-## 単一ファイル例
+# 終了時(disable)
+my_addon.unregister()
+```
 
-`hello.py`
+## path
 
-```py
+### Windows
+
+`%APPDATA%/Blender Foundation/Blender/%BLENDER_VERSION%/scripts/addons`
+
+## 構成
+
+### 単一ファイル例
+
+```py title="hello.py"
 bl_info = {
   "name": "Hello Single File Module",
   "version": (0,0,1),
 }
+
+def register():
+  print 'hello'
+
+def unregister():
+  print 'good bye'
 ```
 
-上記の内容で
-`blender` - `preferences` - `Add-ons` から見えるようになる。
-追加して、`operator` などを登録する必要がある(後述)。
-フォルダを作らなくてもよい。
+上記の内容で `blender` - `preferences` - `Add-ons` から見えるようになる。
 
-## ディレクトリ例
+### ディレクトリ例
 
-`hello/__init__.py`
-
-```py
+```py title="hello/__init__.py"
 bl_info = {
   "name": "Hello Directory Module",
   "version": (0,0,1),
 }
+
+def register():
+  print 'hello'
+
+def unregister():
+  print 'good bye'
 ```
 
-python の directory モジュール。 このファイルから import される module は reload 時に自動では更新されないので対応が必用。 さもないと、 script の更新を反映するのに blender を再起動する必要がある。
+### 孫モジュールの reimport
 
-## 孫モジュールの reimport
-
+これをやらない場合、変更を反映するのに blender の再起動が必要です。
 
 - [Python で from import を reload する。 - graphics.hatenablog.com](https://graphics.hatenablog.com/entry/2017/12/03/004714#%E3%81%9D%E3%82%82%E3%81%9D%E3%82%82%E3%81%AA%E3%82%93%E3%81%A7-reload-%E3%81%99%E3%82%8B%E3%81%AE%E3%81%8B)
 
 ```python
 if "bpy" in locals():
+    # 2回目以降
     import importlib
 
     local_map = locals()

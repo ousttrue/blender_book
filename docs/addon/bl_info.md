@@ -34,7 +34,12 @@ bl_info = {
 
 つまり書かなくて良い。
 
+
+:::danger TESTING は preference に表示されない
+bl_info の内容を COMMUNITY に書きかえるなど。
+
 * [Blender 3.5で、addonにTestingを復活させる方法 - Qiita](https://qiita.com/SaitoTsutomu/items/5872c5e0358394360697)
+:::
 
 ### category
 
@@ -81,7 +86,7 @@ UIのアクセス方法。自由に書いて良い
 
 `text`
 
-# 参考
+## 参考
 
 * https://github.com/nikorummukainen/blender-python-code-templates
 * [はじめてのBlenderアドオン開発](https://www.gitbook.com/book/nutti/introduction-to-add-on-development-in-blender/details)
