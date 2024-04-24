@@ -3,45 +3,13 @@ title: dev
 sidebar_position: 4
 ---
 
-## LSP
-
-## RNA ?
-
-```py
-import bpy
-import rna_info # import bpy すると使えるようになる
-structs, funcs, ops, props = rna_info.BuildRNAInfo()
-```
-
-## bpystubgen
-
-- https://github.com/mysticfall/bpystubgen
-
-```sh
-pip install blender-stubs==3.12.27
-```
-
-- https://github.com/mysticfall/bpystubgen/issues/3
-
-### usage
-
-- https://download.blender.org/source/
-
-```sh
-> cd blender-4.1.1
-> py .\doc\python_api\sphinx_doc_gen.py
-# output to doc/python_api/sphinx-in
-
-> py -m bpystubgen doc/python_api/sphinx-in stub
-```
-
-### fake-bpy-module
-
-- [GitHub - nutti/fake-bpy-module: Fake Blender Python API module collection for the code completion.](https://github.com/nutti/fake-bpy-module)
+## typing
 
 ### fake-bpy
 
 - [4-3. BlenderのAPIをコード補完する | はじめてのBlenderアドオン開発](https://colorful-pico.net/introduction-to-addon-development-in-blender/2.8/html/chapter_04/03_Code_Complete_Blender_API.html)
+
+- [GitHub - nutti/fake-bpy-module: Fake Blender Python API module collection for the code completion.](https://github.com/nutti/fake-bpy-module)
 
 ### stub_generator
 
@@ -55,7 +23,10 @@ TODO: 整理して使えるようにするべし
 
 ### pip
 
-`for Python-3.10 only`
+| blender version | python version |
+| --------------- | -------------- |
+| 4.0             | 3.10           |
+| 4.1             | 3.11           |
 
 ### build
 

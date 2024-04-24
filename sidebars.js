@@ -26,7 +26,14 @@ const sidebars = {
     'bpy_types/index',
     'props',
     'mathutils/index',
-    'dev/index',
+    {
+      type: 'category',
+      label: '開発環境',
+      link: { type: 'doc', id: 'dev/index' },
+      items: [
+        'dev/rna_info',
+      ]
+    },
   ],
 };
 
