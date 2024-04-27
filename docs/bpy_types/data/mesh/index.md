@@ -3,14 +3,34 @@ title: bpy.types.Mesh
 sidebar_position: 1
 ---
 
-# データ構造
+https://docs.blender.org/api/current/bpy.types.Mesh.html
+
+- @2021 [Blender PythonのMeshデータアクセスのチートシート #Python - Qiita](https://qiita.com/kenyoshi17/items/b93bbba6451e3c6017e5)
+
+:::note blender-2.8
+
+tessface無くなった
+https://dskjal.com/blender/script-279-to-280.html
+
+:::
+
+## データ構造
 
 mesh は頂点の配列(mesh.vertices) と 面の配列(mesh.polygons) から構成される。
-ある頂点の法線やUVが面A と面Bで異なる場合があり、これを別頂点として扱いたい。
+面A と面Bで共有される頂点の法線やUVが異なる場合があり、これを別頂点として扱いたい。
 ループ(mesh.loops)がそれである。
 `glb` などに export する場合は、`len(mesh.loops)` が頂点数になる。
 
-# positoin, normal, uv の取得
+```
+Mesh.vertices (3 points in space)
+Mesh.edges (reference 2 vertices)
+Mesh.loops (reference a single vertex and edge) = indices ?
+Mesh.polygons: (reference a range of loops) = faces ?
+```
+
+## from blender
+
+### position, normal, uv の取得
 
 ```python
 import ctypes
@@ -114,52 +134,9 @@ class Vertex(ctypes.Structure):
 
 ```
 
-# uv_layers
+## to blender
 
-- [テクスチャUVを調べる｜Hajime Saito](https://note.com/replicorn/n/nc6f582006a99)
-
-# mesh
-
-tessface無くなった
-https://dskjal.com/blender/script-279-to-280.html
-
-```
-http://blenderscripting.blogspot.com/2011/06/using-frompydata.html
-
-https://docs.blender.org/api/current/bpy.types.Mesh.html
-https://docs.blender.org/api/current/bpy.types.MeshTessFace.html
-```
-
-https://docs.blender.org/api/current/bpy.types.MeshVertex.html
-
-\[Blender PythonのMeshデータアクセスのチートシート https://qiita.com/kenyoshi17/items/b93bbba6451e3c6017e5]
-
-```py
-import bpy
-
-me = bpy.context.object.data
-uv_layer = me.uv.layers.active.data
-
-for poly in me.polygons:
-    print("Polygon index: %d, length: %d" % (poly.index, poly.loop_total))
-
-    # range is used here to show how the polygons reference loops,
-    # for convenience 'poly.loop_indices' can be used instead.
-    for loop_index in range(poly.loop_start, poly.loop_start + poly.loop_total):
-        print("    Vertex: %d" % me.loops[loop_index].vertex_index)
-        print("    UV: %r" % uv_layer[loop_index].uv)
-```
-
-- [Blender PythonのMeshデータアクセスのチートシート](https://qiita.com/kenyoshi17/items/b93bbba6451e3c6017e5)
-
-```
-Mesh.vertices (3 points in space)
-Mesh.edges (reference 2 vertices)
-Mesh.loops (reference a single vertex and edge) = indices ?
-Mesh.polygons: (reference a range of loops) = faces ?
-```
-
-## empty mesh
+### empty mesh
 
 ```py
 import bpy
@@ -172,3 +149,9 @@ bpy.context.scene.collection.objects.link(basic_cube)
 bpy.context.view_layer.objects.active = basic_cube
 basic_cube.select_set(True)
 ```
+
+:::note blender-2.8
+
+http://blenderscripting.blogspot.com/2011/06/using-frompydata.html
+
+:::

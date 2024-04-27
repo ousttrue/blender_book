@@ -4,6 +4,31 @@
 const sidebars = {
   sidebar: [
     'index',
+    'structure',
+    'context',
+    'mode',
+    {
+      type: 'category',
+      label: 'bpy.types',
+      link: { type: 'doc', id: 'bpy_types/index' },
+      items: [
+        'bpy_types/object',
+        {
+          type: 'category',
+          label: 'ID',
+          link: { type: 'doc', id: 'bpy_types/data/index' },
+          items: [
+            {
+              type: 'category',
+              label: 'Mesh',
+              link: { type: 'doc', id: 'bpy_types/data/mesh/index' },
+              items: [
+              ]
+            },
+          ]
+        },
+      ]
+    },
     {
       type: 'category',
       label: 'addon',
@@ -23,7 +48,6 @@ const sidebars = {
         },
       ],
     },
-    'bpy_types/index',
     'props',
     'mathutils/index',
     {
