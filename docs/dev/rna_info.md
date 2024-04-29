@@ -18,6 +18,26 @@ blender 本体のドキュメントは、rna_info から sphinx 向けの rst �
 bmesh, mathutils などは rna_info がありません。
 :::
 
+:::pylance stub order
+
+1. user code
+2. stub
+3. stub package(`-stub` `*.pyi`)
+4. inline package(annotation `py.typed`)
+5. typeshed
+   `typings/bpy`
+
+:::
+
+:::tip 一部の機能は python で追加されている
+
+なので rna_info には含まれない(bpy.types.children など)。
+
+https://projects.blender.org/blender/blender/src/branch/main/scripts/modules/bpy_types.py
+:::
+
+[blender/blender/intern/tools/dump_rna2xml.py at master · lubosz/blender · GitHub](https://github.com/lubosz/blender/blob/master/blender/intern/tools/dump_rna2xml.py)
+
 ## 実装例
 
 ### Blender-PyCharm

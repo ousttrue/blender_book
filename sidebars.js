@@ -9,6 +9,14 @@ const sidebars = {
     'mode',
     {
       type: 'category',
+      label: 'Operator',
+      link: { type: 'doc', id: 'operator/index' },
+      items: [
+        'operator/import_export',
+      ]
+    },
+    {
+      type: 'category',
       label: 'bpy.types',
       link: { type: 'doc', id: 'bpy_types/index' },
       items: [
@@ -27,6 +35,14 @@ const sidebars = {
             },
           ]
         },
+        {
+          type: 'category',
+          label: 'Material',
+          link: { type: 'doc', id: 'bpy_types/material/index' },
+          items: [
+            'bpy_types/material/shadernodes',
+          ]
+        },
       ]
     },
     {
@@ -37,19 +53,27 @@ const sidebars = {
         'addon/python_module',
         'addon/bl_info',
         'addon/register',
-        {
-          type: 'category',
-          label: 'Operator',
-          link: { type: 'doc', id: 'addon/operator/index' },
-          items: [
-            'addon/operator/import_export',
-          ]
-
-        },
       ],
     },
     'props',
     'mathutils/index',
+    {
+      type: 'category',
+      label: 'BMesh',
+      link: { type: 'doc', id: 'bmesh/index' },
+      items: [
+        'bmesh/bmesh_types',
+      ]
+    },
+    {
+      type: 'category',
+      label: 'bpy.bpy_extras',
+      link: { type: 'doc', id: 'bpy_extras/index' },
+      items: [
+        'bpy_extras/io_utils',
+      ]
+    },
+    'build',
     {
       type: 'category',
       label: '開発環境',

@@ -1,5 +1,61 @@
 # BMesh
 
+[Source/Modeling/BMesh/Design - Blender Developer Wiki](https://wiki.blender.org/wiki/Source/Modeling/BMesh/Design)
+
+> Blender’s internal mesh editing API
+
+## articles
+
+- @2022 [blender python で、meshの縁のedgeを選択 - end0tknr&#39;s kipple - web写経開発](https://end0tknr.hateblo.jp/entry/20221021/1666298016)
+- @2022 [blender python で いろいろ処理 - end0tknr&#39;s kipple - web写経開発](https://end0tknr.hateblo.jp/entry/20221021/1666297830)
+- @2021 [Blenderのメッシュ調査](https://zenn.dev/hzuika/scraps/f15bf5a13a07bc)
+
+- @2012 [扉の先の無限の世界　　～Blender 2.5 & 2.6 で作る3DCG～ BMeshの使い方](http://silverspirecg.blog119.fc2.com/blog-entry-66.html)
+- @2012 [扉の先の無限の世界　　～Blender 2.5 & 2.6 で作る3DCG～ BMesh概要](http://silverspirecg.blog119.fc2.com/blog-entry-65.html)
+
+## crease
+
+- https://blender.stackexchange.com/questions/275841/how-to-change-value-of-edge-crease-via-python-script
+
+## from_edit_mesh
+
+- [Blenderでbmeshを操作 | コマンドの達人](https://life-is-command.com/blender-bmesh/)
+- [Blender2.8で利用可能なpythonスクリプトを作る その２５（オブジェクトの分離） - MRが楽しい](https://bluebirdofoz.hatenablog.com/entry/2020/05/09/225003)
+
+## selction
+
+```python
+import bpy
+import bmesh
+
+context = bpy.context
+
+bpy.ops.mesh.primitive_plane_add(
+        enter_editmode=True)
+ob = context.object
+me = ob.data
+
+bm = bmesh.from_edit_mesh(me)
+for i, v in enumerate(bm.verts):
+    v.select_set(not i)
+bm.select_mode |= {'VERT'}
+bm.select_flush_mode()
+bmesh.update_edit_mesh(me)
+```
+
+## from_mesh
+
+`ObjectMode OK`
+`readonly ?`
+
+- [blender python bmeshをオブジェクトモードで使う方法 - アストラルプリズム](https://katsumi3.hatenablog.com/entry/2020/01/28/223355)
+  Mesh操作用のライブラリ(bpyとは別系統)
+  https://docs.blender.org/api/current/bmesh.html
+  https://docs.blender.org/api/2.83/bmesh.html
+
+      [Blender Python BMesh 〜点の操作〜 http://takunoji.hatenablog.com/entry/2018/03/26/225317]
+      [Blender Python 開発メモ 〜UV座標の取得〜 http://takunoji.hatenablog.com/entry/2018/03/20/221150]
+
 - https://docs.blender.org/api/current/bmesh.html
   - https://wiki.blender.org/wiki/Source/Modeling/BMesh/Design
 
