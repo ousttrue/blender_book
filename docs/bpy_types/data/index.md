@@ -1,5 +1,7 @@
 ---
 title: bpy.types.Object.data
-sidebar_position: 3
 ---
 
+bpy.types.Object.data
+
+になれる型。

@@ -23,13 +23,20 @@ const sidebars = {
         'bpy_types/object',
         {
           type: 'category',
-          label: 'ID',
+          label: 'Data',
           link: { type: 'doc', id: 'bpy_types/data/index' },
           items: [
             {
               type: 'category',
               label: 'Mesh',
               link: { type: 'doc', id: 'bpy_types/data/mesh/index' },
+              items: [
+              ]
+            },
+            {
+              type: 'category',
+              label: 'Armature',
+              link: { type: 'doc', id: 'bpy_types/data/armature/index' },
               items: [
               ]
             },
